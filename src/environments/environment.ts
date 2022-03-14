@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl: 'https://the-orange-brand-294.commercelayer.io',     // To make APIs call from the services
+  clientUrl: 'http://localhost:4200'  //Our domain, also used to make redirection to PayPal
 };
 
 /*
