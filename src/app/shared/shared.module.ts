@@ -39,7 +39,8 @@ import { WordWrapPipe } from './pipes/word-wrap.pipe';
     ItemQuantityComponent,
     TitleComponent,
     SimplePageComponent,
-    WordWrapPipe
+    WordWrapPipe,
+    
   ]
 })
 export class SharedModule { }

@@ -23,6 +23,9 @@ import {SharedModule} from "../shared/shared.module";
     ]),
     MatBadgeModule,
     SharedModule
+  ],
+  exports:[
+    HeaderComponent
   ]
 })
 export class CoreModule { }

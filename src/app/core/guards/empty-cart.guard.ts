@@ -1,15 +1,27 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree } from '@angular/router';
+import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
+import { CartService } from 'src/app/data/services/cart.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmptyCartGuard implements CanActivate {
+
+  constructor (private cartService:CartService, private router:Router){
+
+  }
+
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return true;
+
+      if(this.cartService.orderId){
+        if(this.cartService.itemCount > 0){
+          return true
+        }
+      }
+    return this.router.parseUrl('/empty');
   }
   
 }

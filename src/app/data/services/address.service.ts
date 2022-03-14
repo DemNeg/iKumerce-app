@@ -6,6 +6,10 @@ import {Address} from "../models/address";
 import {Observable} from "rxjs";
 import {catchError} from "rxjs/operators";
 
+/*
+Created by Singou Dembele 
+This service creates and retrieves addresses. It’s important when creating and assigning shipping and billing addresses to orders. 
+*/
 
 
 @Injectable({
